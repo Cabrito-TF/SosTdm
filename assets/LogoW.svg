@@ -6,7 +6,7 @@
 	.st0{fill:#9D9D9B;}
 	.st1{fill:#E3E2E2;}
 	.st2{font-family:'BebasNeue-Regular';}
-	.st3{font-size:374.8324px;}
+	.st3{font-size:220px;}
 	.st4{font-family:'Gotham-Thin';}
 	.st5{font-size:146.0393px;}
 	.st6{letter-spacing:5;}
@@ -32,7 +32,7 @@
 				C412.74,338.71,415.42,340.49,417.82,339.42z"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 940.9551 330.8393)" class="st1 st2 st3">SOS TDM</text>
-	<text transform="matrix(1 0 0 1 1017.5605 505.6752)"><tspan x="0" y="0" class="st0 st4 st5">assisstência</tspan><tspan x="-7.23" y="133.87" class="st0 st4 st5 st6">psicológica</tspan></text>
+	<text transform="matrix(1 0 0 1 780.9551 330.8393)" class="st1 st2 st3">SOS TDM</text>
+	<text transform="matrix(1 0 0 1 917.5605 505.6752)"><tspan x="0" y="0" class="st0 st4 st5">assisstência</tspan><tspan x="10" y="133.87" class="st0 st4 st5 st6">psicológica</tspan></text>
 </g>
 </svg>
