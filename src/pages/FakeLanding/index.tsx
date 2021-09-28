@@ -7,9 +7,9 @@ import { useNavigation } from "@react-navigation/core";
 
 
 
-const Landing: React.FC = () =>{
+const FakeLanding: React.FC = () =>{
     const {navigate} = useNavigation();
-    
+
     return(
         <Styled.Gradient
         colors={["#2F465B","#223342"]}
@@ -23,20 +23,8 @@ const Landing: React.FC = () =>{
                 <Styled.ImageLanding source={landingImg} />
             </Styled.ImgContainer>
             
-            <Styled.Input 
-            className="email"
-            placeholder="E-mail"
-            keyboardType="email-address"
-            />
-            
-            <Styled.Input 
-            className="password"
-            placeholder="Senha"
-            secureTextEntry={true}
-            />
-            
             <Styled.ButtonsContainer>
-                <Styled.Button onPress={()=>console.log("Teste")} activeOpacity={1}>
+                <Styled.Button onPress={()=>navigate("Landing")} activeOpacity={1}>
                     <>Login</>
                 </Styled.Button>   
             </Styled.ButtonsContainer>
@@ -51,4 +39,4 @@ const Landing: React.FC = () =>{
     )
 }
 
-export default Landing;
+export default FakeLanding;
