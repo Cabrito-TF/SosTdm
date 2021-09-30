@@ -3,6 +3,7 @@
     "name": "SosTdm",
     "slug": "SosTdm",
     "version": "1.0.0",
+    "scheme":"sostdm",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -23,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.sostdm"
     },
     "web": {
       "favicon": "./assets/favicon.png"

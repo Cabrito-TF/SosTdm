@@ -10,14 +10,28 @@ export const Gradient = styled(LinearGradient)`
   position:relative;
 `;
 
+export const LogoLanding = styled.Image`
+  position:absolute;
+  width: 110% ;
+  height: 100% ;
+`;
+
+export const LogoContainer = styled.View`
+  position:relative;
+  width:11.8rem;
+  height:5rem;
+  top:-1.5rem;
+`;
+
 export const Input = styled.TextInput`
   color: #f6f6f6;
   font-size: 20px;
-  border-radius: 10px;
-  border: 1px solid #fff;
+  border-radius: 3px;
+  border:#fff;
+  border-width:2px;
   height: 50px;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 `;
 
 export const ButtonsContainer = styled.View`
@@ -30,7 +44,7 @@ export const ButtonsContainer = styled.View`
 
 export const Button = styled.TouchableOpacity`
   height: 2rem;
-  width: 10rem;
+  width: 13rem;
   border-radius: 8px;
   padding: 24px;
   font-family:sans-serif;
@@ -40,4 +54,9 @@ export const Button = styled.TouchableOpacity`
   align-items:center;
   justify-content: center;
   background-color: #e1e1e1;
+`;
+
+export const Form = styled.View`
+  margin-bottom:15vh;
+
 `;

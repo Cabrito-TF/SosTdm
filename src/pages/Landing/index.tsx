@@ -9,7 +9,7 @@ import { useNavigation } from "@react-navigation/core";
 
 const Landing: React.FC = () =>{
     const {navigate} = useNavigation();
-    
+
     return(
         <Styled.Gradient
         colors={["#2F465B","#223342"]}
@@ -36,7 +36,7 @@ const Landing: React.FC = () =>{
             />
             
             <Styled.ButtonsContainer>
-                <Styled.Button onPress={()=>console.log("Teste")} activeOpacity={1}>
+                <Styled.Button onPress={()=>console.log("login")} activeOpacity={1}>
                     <>Login</>
                 </Styled.Button>   
             </Styled.ButtonsContainer>
