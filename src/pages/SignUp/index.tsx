@@ -1,7 +1,8 @@
 import React,{useState, useEffect} from "react";
 import * as Styled from "./styles";
-import { View,Button, Alert } from "react-native";
-import LogoW from "../../../assets/LogoW.svg"
+import { View,Button, Alert} from "react-native";
+import {Picker} from "@react-native-picker/picker";
+import LogoW from "../../../assets/LogoW.svg";
 import Toast from 'react-native-toast-message';
 import DateTimePicker from "@react-native-community/datetimepicker";
 
@@ -11,6 +12,7 @@ interface User {
     password?: string;
     whatsapp?: string;
     birthdate?: string;
+    psy?: boolean;
 }
 
 const SignUp: React.FC = () =>{
@@ -23,6 +25,7 @@ const SignUp: React.FC = () =>{
         password:"",
         whatsapp: "",
         birthdate:"",
+        psy:false,
     }
     const [user, onChangeUser] = React.useState(us);
 
@@ -110,9 +113,24 @@ const SignUp: React.FC = () =>{
                   birthdate: text,
                 }); console.log(user.birthdate)}
               }
-              value={user.birthdate}
+            value={user.birthdate}
             />
+
+            {/* <Picker 
+            selectedValue={user.psy}
+            onValueChange={(itemValue, itemIndex) =>{onChangeUser({
+                ...user,
+                psy:itemValue
+              }); console.log(user.psy)}
+            }>
+              <Picker.Item label="Psicologo" value={true}/>
+              <Picker.Item label="Paciente" value={false}/>
+            </Picker> */}
+
             </Styled.Form>
+
+            
+
             <Styled.ButtonsContainer>
                 <Styled.Button onPress={()=> verification()} activeOpacity={1}>
                     <>Cadastrar-se</>

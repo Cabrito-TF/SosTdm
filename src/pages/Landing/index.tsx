@@ -37,13 +37,13 @@ const Landing: React.FC = () =>{
             
             <Styled.ButtonsContainer>
                 <Styled.Button onPress={()=>console.log("login")} activeOpacity={1}>
-                    <>Login</>
+                    <Text>Login</Text>
                 </Styled.Button>   
             </Styled.ButtonsContainer>
 
             <Styled.SignUp>
                 <Styled.SignUpBtn onPress={()=>navigate("SignUp")} activeOpacity={1}>
-                    <>Cadastre-se</>
+                    <Text>Cadastre-se</Text>
                 </Styled.SignUpBtn>
             </Styled.SignUp>
             

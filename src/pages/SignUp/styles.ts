@@ -18,9 +18,9 @@ export const LogoLanding = styled.Image`
 
 export const LogoContainer = styled.View`
   position:relative;
-  width:11.8rem;
-  height:5rem;
-  top:-1.5rem;
+  width:30px;
+  height:14px;
+  top:-7px;
 `;
 
 export const Input = styled.TextInput`
@@ -36,15 +36,14 @@ export const Input = styled.TextInput`
 
 export const ButtonsContainer = styled.View`
   justify-content: center;
-  box-shadow:0 0.2rem 0 #9f9f9f;
+  box-shadow:0 2px 0 #9f9f9f;
   border-radius: 8px;
-  transition: all 0.2s ease;
   margin-bottom:10px;
 `;
 
 export const Button = styled.TouchableOpacity`
-  height: 2rem;
-  width: 13rem;
+  height: 15px;
+  width: 30px;
   border-radius: 8px;
   padding: 24px;
   font-family:sans-serif;
