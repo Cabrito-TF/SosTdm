@@ -18,10 +18,11 @@ export const LogoLanding = styled.Image`
 
 export const LogoContainer = styled.View`
   position:relative;
-  width:30px;
-  height:14px;
-  top:-7px;
+  width:192px;
+  height:81px;
+  top:-25px;
 `;
+
 
 export const Input = styled.TextInput`
   color: #f6f6f6;
@@ -31,7 +32,7 @@ export const Input = styled.TextInput`
   border-width:2px;
   height: 50px;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 `;
 
 export const ButtonsContainer = styled.View`
@@ -42,8 +43,8 @@ export const ButtonsContainer = styled.View`
 `;
 
 export const Button = styled.TouchableOpacity`
-  height: 15px;
-  width: 30px;
+  height: 25px;
+  width: 200px;
   border-radius: 8px;
   padding: 24px;
   font-family:sans-serif;
@@ -56,6 +57,6 @@ export const Button = styled.TouchableOpacity`
 `;
 
 export const Form = styled.View`
-  margin-bottom:15vh;
+  margin-bottom:30px;
 
 `;

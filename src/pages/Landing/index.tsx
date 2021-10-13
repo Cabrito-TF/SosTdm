@@ -1,6 +1,6 @@
 import React from "react";
-import landingImg from "../../../assets/physcologists.svg";
-import LogoW from "../../../assets/LogoW.svg"
+import landingImg from "../../../assets/physcologists.png";
+import LogoW from "../../../assets/LogoW.png"
 import * as Styled from "./styles";
 import { Text,View } from "react-native";
 import { useNavigation } from "@react-navigation/core";

@@ -6,6 +6,7 @@ import { DrawerActions } from '@react-navigation/native';
 
 import Landing from '../../pages/Landing';
 import SignUp from '../../pages/SignUp';
+import MainPage from '../../pages/MainPage';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -15,6 +16,7 @@ return(
         <Navigator screenOptions={{headerShown:false}}>
             <Screen name="Landing" children={()=><Landing/>}/>
             <Screen name="SignUp" children={()=><SignUp/>}/>
+            <Screen name="Main" children={()=><MainPage/>}/>
         </Navigator>
     </NavigationContainer>
 )

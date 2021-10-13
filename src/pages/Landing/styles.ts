@@ -13,15 +13,15 @@ export const Gradient = styled(LinearGradient)`
 
 export const ImgContainer = styled.View`
   position:relative;
-  width:30px;
-  height:20px;
+  width:326px;
+  height:150px;
   top:-14px;
 `;
 export const LogoContainer = styled.View`
   position:relative;
-  width:30px;
-  height:15px;
-  top:-14px;
+  width:192px;
+  height:81px;
+  top:-25px;
 `;
 
 export const ImageLanding = styled.Image`
@@ -41,6 +41,7 @@ export const Input = styled.TextInput`
   border: 1px solid #fff;
   height: 50px;
   padding: 10px;
+  width:200px;
   margin-bottom: 10px;
 `;
 export const ButtonsContainer = styled.View`
@@ -51,8 +52,8 @@ export const ButtonsContainer = styled.View`
 `;
 
 export const Button = styled.TouchableOpacity`
-  height: 10px;
-  width: 25px;
+  height: 25px;
+  width: 150px;
   border-radius: 8px;
   padding: 24px;
   font-family:sans-serif;
@@ -70,7 +71,7 @@ export const SignUp = styled.TouchableOpacity`
   margin-bottom:10px;
 `;
 export const SignUpBtn = styled.TouchableOpacity`
-  height: 10px;
+  height: 20px;
   width: 100%;
   border-radius: 8px;
   padding: 15px;
