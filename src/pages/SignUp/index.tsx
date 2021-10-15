@@ -5,7 +5,8 @@ import {Picker} from "@react-native-picker/picker";
 import LogoW from "../../../assets/LogoW.png";
 import Toast from 'react-native-toast-message';
 import DateTimePicker from "@react-native-community/datetimepicker";
-import api from "../../services/api"
+import api from "../../services/api";
+import { Icon } from 'react-native-elements';
 import { useNavigation } from "@react-navigation/core";
 
 interface User {
@@ -63,15 +64,17 @@ const SignUp: React.FC = () =>{
     async function handleSignUp(){
       if(verification()){
       try{
-        const response = api.post("clientes",{
+        const response = api.post("Register",{
           name: user.name,
           email: user.email,
           password: user.password,
           pnumber: user.whatsapp,
+          username: user.email,
           birthdate: user.birthdate,
-          psy: user.psy
+          psy: user.psy,
+          logged: user.logged
         });
-        navigate("Main")
+         navigate("Landing")
       }
       catch(err){
         console.log(err)
@@ -95,6 +98,7 @@ const SignUp: React.FC = () =>{
 
             <Styled.Input 
             className="Name"
+            placeholderTextColor="#9f9f9f"
             placeholder="Nome Completo"
             keyboardType="default"
             autoCapitalize="words"
@@ -109,6 +113,7 @@ const SignUp: React.FC = () =>{
 
             <Styled.Input 
             className="email"
+            placeholderTextColor="#9f9f9f"
             placeholder="E-mail"
             autocapitalize="none"
             keyboardType="email-address"
@@ -124,6 +129,7 @@ const SignUp: React.FC = () =>{
 
             <Styled.Input 
             className="senha"
+            placeholderTextColor="#9f9f9f"
             placeholder="Senha"
             keyboardType="default"
             autoCapitalize="none"
@@ -138,6 +144,7 @@ const SignUp: React.FC = () =>{
 
             <Styled.Input 
             className="password-match"
+            placeholderTextColor="#9f9f9f"
             placeholder="Confirme Sua Senha"
             keyboardType="default"
             autoCapitalize="none"
@@ -151,6 +158,7 @@ const SignUp: React.FC = () =>{
 
             <Styled.Input 
             className="whatsapp"
+            placeholderTextColor="#9f9f9f"
             placeholder="Número de Whatsapp"
             keyboardType="numeric"
             maxLength={11}
@@ -165,6 +173,7 @@ const SignUp: React.FC = () =>{
 
             <Styled.Input 
             className="birthday"
+            placeholderTextColor="#9f9f9f"
             placeholder="Data de Nascimento"
             keyboardType="numeric"
             maxLength={10}
@@ -205,6 +214,9 @@ const SignUp: React.FC = () =>{
                     <Text>Cadastrar-se</Text>
                 </Styled.Button>
             </Styled.ButtonsContainer>
+            <Styled.IconContainer>
+              <Icon name="chevron-left" type="font-awesome" color="#f6f6f6" onPress={()=>navigate("Landing")}/>
+            </Styled.IconContainer>
             </Styled.Gradient>
             
     )
@@ -214,14 +226,7 @@ const styles = StyleSheet.create({
 picker:{
   borderRadius: 8,
   height: 50,
-  backgroundColor:"#223342",
+  backgroundColor:"#66074e",
   color:"#9f9f9f"
-},
-pItem:{
-  borderRadius:8,
-  height:30,
-  backgroundColor:"#8f25af",
-} 
-});
-
+}});
 export default SignUp;

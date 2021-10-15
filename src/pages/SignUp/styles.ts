@@ -60,3 +60,8 @@ export const Form = styled.View`
   margin-bottom:30px;
 
 `;
+export const IconContainer = styled.View`
+position:absolute;
+left:50px;
+top:30px;
+`;
