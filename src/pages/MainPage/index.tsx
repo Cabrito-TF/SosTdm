@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import landingImg from "../../../assets/physcologists.png";
 import * as Styled from "./styles";
 import { useNavigation } from "@react-navigation/core";
@@ -18,14 +18,17 @@ interface User{
 
 const MainPage: React.FC = () =>{
     const {navigate} = useNavigation();
-    let user
+    let us: User[];
+    us = [];
+
+    const [users, setUsers] = useState(us)
     async function loadAllsuers() {
         let arr: [];
         arr = [];
         
         const { data } = await api.get("list");
         data.map(async () => {
-          const response = await api.get(`classes/${gp.class_id}`);
+          const response = await api.get("list");
           let newUser: User = {
             id:response.data.id,
             name:response.data.name,

@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "outDir": "build",
     "typeRoots": ["./src/@types", "./node_modules/@types"],
     "noImplicitAny": false,
     "skipLibCheck": true,
