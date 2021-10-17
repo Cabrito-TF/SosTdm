@@ -1,6 +1,6 @@
   
 import axios from 'axios';
 
-const api = axios.create({ baseURL: "http://192.168.150.104:8080" });
+const api = axios.create({ baseURL: "https://sos-tdm-back.herokuapp.com" });
 
 export default api;

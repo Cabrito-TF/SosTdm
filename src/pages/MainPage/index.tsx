@@ -1,10 +1,11 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import landingImg from "../../../assets/physcologists.png";
 import * as Styled from "./styles";
 import { useNavigation } from "@react-navigation/core";
 import { Text } from "react-native";
 import api from "../../services/api"
-
+import * as SecureStore from "expo-secure-store";
+import AsyncStorage from "@react-native-community/async-storage";
 
 interface User{
     id:string,
@@ -22,10 +23,12 @@ const MainPage: React.FC = () =>{
     us = [];
 
     const [users, setUsers] = useState(us)
-    async function loadAllsuers() {
+    const [loading, setLoading] = useState(true);
+
+    async function loadAllUsers() {
         let arr: [];
         arr = [];
-        
+        setUsers(arr)
         const { data } = await api.get("list");
         data.map(async () => {
           const response = await api.get("list");
@@ -41,6 +44,20 @@ const MainPage: React.FC = () =>{
           setUsers((valor) => [...valor, newUser]);
         });
       }
+      useEffect(() => {
+        async function bringAllGroups() {
+          let token = await AsyncStorage.getItem("token");
+          if (token) {
+            token = token.replace(/^"(.*)"$/, '$1'); // Remove quotes from token start/end. This is a temp fix?!
+            api.defaults.headers.Authorization = `Bearer ${token}`;
+          }
+    
+          loadAllUsers();
+          setLoading(false);
+        }
+        bringAllGroups();
+      }, []);
+
     return(
         <Styled.Gradient
         colors={["#2F465B","#223342"]}
