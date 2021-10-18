@@ -9,3 +9,8 @@ export const Gradient = styled(LinearGradient)`
   align-items:center;
   position:relative;
 `;
+export const IconContainer = styled.View`
+position:absolute;
+left:50px;
+top:30px;
+`;

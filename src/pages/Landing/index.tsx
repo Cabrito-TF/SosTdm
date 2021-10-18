@@ -2,7 +2,7 @@ import React from "react";
 import landingImg from "../../../assets/physcologists.png";
 import LogoW from "../../../assets/LogoW.png"
 import * as Styled from "./styles";
-import AsyncStorage from "@react-native-community/async-storage";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Text,View} from "react-native";
 import { useNavigation } from "@react-navigation/core";
 import * as SecureStore from "expo-secure-store";
