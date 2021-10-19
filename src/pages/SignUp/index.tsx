@@ -210,13 +210,13 @@ const SignUp: React.FC = () =>{
             
 
             <Styled.ButtonsContainer>
-                <Styled.Button onPress={()=> handleSignUp()} activeOpacity={1}>
+                <Styled.Button onPress={()=> handleSignUp()}>
                     <Text>Cadastrar-se</Text>
                 </Styled.Button>
             </Styled.ButtonsContainer>
             <Styled.IconContainer>
               <Icon name="chevron-left" type="font-awesome" color="#f6f6f6" onPress={()=>navigate("Landing")}/>
-            </Styled.IconContainer>
+            </Styled.IconContainer> 
             </Styled.Gradient>
             
     )

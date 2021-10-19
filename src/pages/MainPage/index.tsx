@@ -2,7 +2,7 @@ import React,{useState, useEffect} from "react";
 import landingImg from "../../../assets/physcologists.png";
 import * as Styled from "./styles";
 import { useNavigation } from "@react-navigation/core";
-import { Text } from "react-native";
+import { Linking, Text } from "react-native";
 import api from "../../services/api"
 import * as SecureStore from "expo-secure-store";
 import { Icon, ListItem} from 'react-native-elements';
@@ -79,6 +79,7 @@ const MainPage: React.FC = () =>{
           users.map((l, i)=>(
             
             <ListItem
+            onPress={()=> Linking.openURL(`http://wa.me/55${l.pnumber}`)}
             containerStyle={{
               flexDirection: "row",
               backgroundColor: "#151F28",
@@ -88,12 +89,11 @@ const MainPage: React.FC = () =>{
               },
               shadowOpacity: 0.5,
               shadowRadius: 2,
-              width:400,
+              width:500,
               alignContent:"center",
             }}
             key={i}
             bottomDivider>
-              <a href={`https://wa.me/55${l.pnumber}`} style={{textDecoration:"none",alignItems: "center",}}>
               <ListItem.Content>
               <ListItem.Title
               style={{
@@ -113,7 +113,6 @@ const MainPage: React.FC = () =>{
               {l.pnumber}
             </ListItem.Subtitle>
               </ListItem.Content>
-              </a>
             </ListItem>
           )) : <Text>Carregando Aguarde...</Text>}
           

@@ -48,6 +48,7 @@ const Landing: React.FC = () =>{
             className="email"
             placeholder="E-mail"
             keyboardType="email-address"
+            autoCapitalize="none"
             onChangeText={(text) => onChangeUsername(text)}
             value={username}
             />
@@ -61,13 +62,13 @@ const Landing: React.FC = () =>{
             />
             
             <Styled.ButtonsContainer>
-                <Styled.Button onPress={()=>handleLogin()} activeOpacity={1}>
+                <Styled.Button onPress={()=>handleLogin()}>
                     <Text>Login</Text>
                 </Styled.Button>   
             </Styled.ButtonsContainer>
 
             <Styled.SignUp>
-                <Styled.SignUpBtn onPress={()=>navigate("SignUp")} activeOpacity={1}>
+                <Styled.SignUpBtn onPress={()=>navigate("SignUp")}>
                     <Text>Cadastre-se</Text>
                 </Styled.SignUpBtn>
             </Styled.SignUp>
